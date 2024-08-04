@@ -46,6 +46,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solution", "solution", "{FC
 		.dockerignore = .dockerignore
 		.editorconfig = .editorconfig
 		.gitignore = .gitignore
+		..\..\..\..\..\work\customers\cvz\TStore\global.json = ..\..\..\..\..\work\customers\cvz\TStore\global.json
 		Readme.md = Readme.md
 	EndProjectSection
 EndProject

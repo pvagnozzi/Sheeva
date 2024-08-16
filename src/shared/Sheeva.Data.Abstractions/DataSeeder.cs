@@ -1,6 +1,6 @@
 namespace Sheeva.Data.Abstractions;
 
-using Log;
+using Logging;
 using Microsoft.Extensions.Logging;
 using Services;
 

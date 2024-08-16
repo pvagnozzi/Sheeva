@@ -1,8 +1,10 @@
-IDistributedApplicationBuilder builder = DistributedApplication.CreateBuilder(args);
-IResourceBuilder<RedisResource> cache = builder.AddRedis("cache");
-IResourceBuilder<ProjectResource> apiService = builder.AddProject<Projects.GaneshAI_ApiService>("apiservice");
+var builder = DistributedApplication.CreateBuilder(args);
+var redis = builder.AddRedis("redis", 6379)
+    .WithPersistence()
+    .WithDataVolume();
+var apiService = builder.AddProject<Projects.GaneshAI_ApiService>("apiservice");
 builder.AddProject<Projects.GaneshAI_Web>("webfrontend")
     .WithExternalHttpEndpoints()
-    .WithReference(cache)
+    .WithReference(redis)
     .WithReference(apiService);
 builder.Build().Run();

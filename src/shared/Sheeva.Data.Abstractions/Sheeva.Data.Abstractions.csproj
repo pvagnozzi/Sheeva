@@ -6,4 +6,10 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Sheeva.Core\Sheeva.Core.csproj" />
+      <ProjectReference Include="..\Sheeva.Log\Sheeva.Log.csproj" />
+      <ProjectReference Include="..\Sheeva.Services\Sheeva.Services.csproj" />
+    </ItemGroup>
+
 </Project>
